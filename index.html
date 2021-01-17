@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <link rel="stylesheet"  href="Styles/bootstrap.min.css">
+  <link rel="stylesheet"  href="Styles/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form id="form">
+          <div class="form-group">
+            <label for="example-form">Enter some text</label>
+            <input class="form-control" id="example-form-input" name="example-form" type="text">
+          </div>
+          <button id="button" type="button" class="btn btn-default">Enter</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Form Data:
+          <span id='outputText'></span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="Data/df_Clean.js"></script>
+<script src="Scripts/app.js"></script>
+
+</html>
