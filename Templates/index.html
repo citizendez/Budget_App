@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+ 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4">Description Filter
+        <input class="form-control" id="filter-input" name="example-form" type="text">
+      </div>
+      <div class="col-lg-3">Month Filter
+        <select class="form-control" id="filter-month"> </select>
+      </div>
+      <div class="col-lg-3">Category Filter
+        <select class="form-control" id="filter-category"></select>
+      </div>
+      <div class="col-lg-2">Reset
+        <button class="form-control" id="button">Reset Filters</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Form Data: </h1>
+        <div id="plot"></div>
+        <table id='results' class='table table-striped'>
+            <thead id='results-head'></thead>
+            <tbody id='reuslts-body'></tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="{{ url_for('static', filename='data/monthNames.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</html>
