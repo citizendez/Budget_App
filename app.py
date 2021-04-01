@@ -1,4 +1,4 @@
-import json
+import json, os, re
 from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
@@ -7,14 +7,12 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/api/budget_data')
-def budget_data():
-
-    with open('Static/data/df_Clean.json') as datafile:
-        data = json.load(datafile) 
-    
+@app.route('/api/budget_data/<datafile>')
+def budget_data(datafile): 
+    with open(f'Data/df_{datafile}.json') as f:
+        data = json.load(f)  
     return jsonify(data)
-
+ 
 
 if __name__ == "__main__":
     app.run(debug=True)
