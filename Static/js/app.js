@@ -76,6 +76,7 @@ function createHeaders(transactions){
     var tableHead = d3.select('#results-head');
     tableHead.html('');
     var tran = transactions[0];
+    tableHead.html('')
     Object.keys(tran).forEach(key => {
         var cell = tableHead.append('th');
         cell.text(key);
