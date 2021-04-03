@@ -3,3 +3,5 @@ Config/
 Key/
 *.json
 static/data/
+config.*
+*.config
