@@ -5,3 +5,5 @@ Key/
 static/data/
 config.*
 *.config
+.ipynb_checkpoints/
+__pycache__/
